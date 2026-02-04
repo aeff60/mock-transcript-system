@@ -1,0 +1,223 @@
+.main {
+  padding: 2rem;
+  background-color: #ffffff;
+  font-family: 'Sarabun', 'TH Sarabun New', Arial, sans-serif;
+  max-width: 210mm;
+  margin: 0 auto;
+  color: #333;
+}
+
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.logo {
+  font-size: 4rem;
+}
+
+.universityInfo {
+  text-align: center;
+}
+
+.universityInfo h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  color: #006633;
+}
+
+.universityInfo h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #006633;
+  font-weight: normal;
+}
+
+.universityInfo p {
+  margin: 0.5rem 0 0 0;
+  font-size: 1.1rem;
+  color: #444;
+}
+
+.divider {
+  border: none;
+  border-top: 2px solid #006633;
+  margin: 1.5rem 0;
+}
+
+/* Student Section */
+.studentSection {
+  margin-bottom: 2rem;
+}
+
+.studentSection h3 {
+  color: #006633;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.studentGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem 2rem;
+}
+
+.infoRow {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.label {
+  font-weight: bold;
+  color: #555;
+  min-width: 120px;
+}
+
+.statusActive {
+  color: #28a745;
+  font-weight: bold;
+}
+
+/* Grades Section */
+.gradesSection {
+  margin-bottom: 2rem;
+}
+
+.gradesSection h3 {
+  color: #006633;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.gradeTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.gradeTable th {
+  background-color: #006633;
+  color: white;
+  padding: 0.75rem 0.5rem;
+  text-align: left;
+  font-weight: 600;
+}
+
+.gradeTable td {
+  padding: 0.6rem 0.5rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.gradeTable tbody tr:hover {
+  background-color: #f5f5f5;
+}
+
+.gradeTable .center {
+  text-align: center;
+}
+
+/* Summary Section */
+.summarySection {
+  margin-bottom: 2rem;
+}
+
+.summarySection h3 {
+  color: #006633;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.summaryGrid {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.summaryCard {
+  background: linear-gradient(135deg, #006633 0%, #009944 100%);
+  color: white;
+  padding: 1.5rem 2rem;
+  border-radius: 8px;
+  text-align: center;
+  min-width: 150px;
+}
+
+.summaryLabel {
+  display: block;
+  font-size: 0.85rem;
+  opacity: 0.9;
+  margin-bottom: 0.5rem;
+}
+
+.summaryValue {
+  display: block;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.summaryValueLarge {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+/* Footer */
+.footer {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #ddd;
+  text-align: center;
+  color: #666;
+}
+
+.footer p {
+  margin: 0.3rem 0;
+}
+
+.note {
+  font-size: 0.85rem;
+  color: #888;
+  font-style: italic;
+}
+
+.signatureArea {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 3rem;
+}
+
+.signature {
+  text-align: center;
+  width: 200px;
+}
+
+.signatureLine {
+  border-bottom: 1px solid #333;
+  height: 40px;
+  margin-bottom: 0.5rem;
+}
+
+/* Print styles */
+@media print {
+  .main {
+    padding: 0;
+    max-width: none;
+  }
+  
+  .gradeTable tbody tr:hover {
+    background-color: transparent;
+  }
+  
+  .summaryCard {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
