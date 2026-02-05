@@ -11,6 +11,7 @@ export class ReportService {
   async generateTranscript(studentId?: string): Promise<Buffer> {
     const browser = await puppeteer.launch({
       headless: true,
+      args: ['--no-sandbox', '--disable-setuid-sandbox'],
     });
 
     const page = await browser.newPage();
@@ -44,6 +45,7 @@ export class ReportService {
         left: '15mm',
         right: '15mm',
       },
+      scale: 0.65,
     });
 
     await browser.close();
@@ -56,6 +58,7 @@ export class ReportService {
   async generateEnrollmentCertificate(studentId?: string): Promise<Buffer> {
     const browser = await puppeteer.launch({
       headless: true,
+      args: ['--no-sandbox', '--disable-setuid-sandbox'],
     });
 
     const page = await browser.newPage();

@@ -1,0 +1,23 @@
+services:
+  report-web:
+    build:
+      context: ./report-web
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - HOSTNAME=0.0.0.0
+
+  report-service:
+    build:
+      context: ./report-service
+      dockerfile: Dockerfile
+    ports:
+      - "3001:3001"
+    environment:
+      - NODE_ENV=production
+      - PORT=3001
+      - FRONTEND_URL=http://report-web:3000
+    depends_on:
+      - report-web
